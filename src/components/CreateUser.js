@@ -15,7 +15,7 @@ export default function ListUser() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.post('http://localhost/api/user/save', inputs).then(function(response){
+        axios.post('https://dreamstarz.in/demo/api/user/save', inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });

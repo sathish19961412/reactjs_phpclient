@@ -14,7 +14,7 @@ export default function ListUser() {
     }, []);
 
     function getUser() {
-        axios.get(`http://localhost/api/user/${id}`).then(function(response) {
+        axios.get(`https://dreamstarz.in/demo/api/user/${id}`).then(function(response) {
             console.log(response.data);
             setInputs(response.data);
         });
@@ -28,7 +28,7 @@ export default function ListUser() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.put(`http://localhost/api/user/${id}/edit`, inputs).then(function(response){
+        axios.put(`https://dreamstarz.in/demo/api/user/${id}/edit`, inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });
